@@ -1,0 +1,7 @@
+[user]
+	name = Andrew Watson
+	email = andrew@watsons.ch
+[color]
+	diff = auto
+	status = auto
+	branch = auto
