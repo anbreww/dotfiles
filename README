@@ -1,0 +1,7 @@
+Andrew's dotfile repository.
+
+Usage : symlink appropriately from home folder to base directory.
+(see install.rb script)
+
+Files can now be modified, branched, merged etc withing the repo,
+and changes synced between computers easily
