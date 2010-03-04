@@ -230,6 +230,7 @@ for s = 1, screen.count() do
         --separator, fs.h.widget, fs.r.widget, fsicon,
         separator, cpugraph.widget, cpuicon,
         separator, memtext, spacer, memicon, 
+        separator, lokiwidget,
         layout = awful.widget.layout.horizontal.rightleft
     }
 end

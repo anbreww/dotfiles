@@ -35,6 +35,23 @@ function get_weather()
 	return {temperature, situation}
 end
 
+function get_loki()
+    local filedescriptor = io.open('/tmp/aw_cache/loki_status')
+    local loki_status = filedescriptor:read()
+    filedescriptor:close()
+
+    local lcolour = beautiful.fg_normal
+    if loki_status:match("up") then
+        lcolour = beautiful.up_green
+    elseif loki_status:match("down") then
+        lcolour = beautiful.down_red
+    end
+
+    loki_status_formatted = 'loki : <span color="' .. lcolour .. '">' .. loki_status .. '</span>'
+
+    return {loki_status_formatted}
+end
+
 function get_wmail()
 	local filedescriptor = io.open('/tmp/aw_cache/unreadcount')
 	local unread_count = filedescriptor:read()
@@ -77,6 +94,11 @@ else
     vicious.register(netwidget, vicious.widgets.net,
             '<span color="#CC9393">${eth0 down_kb}</span> <span color="#7F9F7F">${eth0 up_kb}</span>', 1)
 end
+
+--- {{{ Loki status widget
+lokiwidget = widget({ type = "textbox" })
+vicious.register(lokiwidget, get_loki, "$1", 300)
+
 
 -- {{{ WiFi widget
 if hostname == "fenrir" then

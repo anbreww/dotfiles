@@ -58,6 +58,9 @@ theme.fg_netup_widget  = "#7F9F7F"
 theme.fg_netdn_widget  = theme.fg_urgent
 theme.bg_widget        = theme.bg_normal
 theme.border_widget    = theme.bg_normal
+
+theme.up_green = "#7f9f7f"
+theme.down_red = "#CC9393"
 -- }}}
 --
 --	{{{ Widget icons
