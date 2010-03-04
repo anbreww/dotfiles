@@ -14,6 +14,8 @@
 
                 set t_Co=256 " 256 colours in terminal!
 
+                set go=aegi " GUI options : no menu (m), scrollbar (r), or toolbar (t)
+
                 """ WILD MENU !! ***
                 set wildmenu
 """ ADD-ONS ***
@@ -30,6 +32,7 @@
 
                 " Special functions for AVR C source files
                 au BufRead,BufNewFile */avr/*.[ch] call FT_avr()
+                au BufRead,BufNewFile */avr/*.cpp call FT_avr()
 
                 " Coloured syntax for apache2 config files
                 au BufRead,BufNewFile /etc/apache2/* set syntax=apache
@@ -42,8 +45,10 @@
                   " Specific LaTeX commands
                   "
                   " Compile and display a tex file WITH BIBLIOGRAPHY
-                map <F3> :w<CR>:!pdflatex % && pdflatex % && bibtex %:t:r
-                    \ && pdflatex % && evince %:t:r.pdf<CR>
+                "map <F3> :w<CR>:!pdflatex % && pdflatex % && bibtex %:t:r
+                "    \ && pdflatex % && evince %:t:r.pdf<CR>
+
+                map <F3> :w<CR>:!make pdf<CR>
 
                 endfunction
 
@@ -90,7 +95,7 @@
 
                 function FT_avr()
 
-                  echo "Including AVR C macros!"
+                  "echo "Including AVR C macros! F5 to make hex, F6 to download"
                   " make hex file
                   map <F5> :w<CR>:make hex<CR>
 
@@ -206,9 +211,17 @@
 
                 function FT_python()
                   "source ~/.vim/python-macros.vim " ( file doesn't exist yet)
-                  map <F5> :w<CR>!python %<CR>
+                  map <F5> :w<CR>:!python %<CR>
+                  map <F6> :w<CR>:!python3 %<CR>
                   " make sure Python source code is tabbed correctly
-                  retab 2 | set shiftwidth=2
+		  " changed from 2 to 4. cf. PEP 8
+                  retab 4 | set shiftwidth=4
+		  set expandtab
+		  set tabstop=4
+		  set softtabstop=4
+		  " max line width = 79 (PEP 8)
+		  " recommended 72 for flowing text (docstrings & comments)
+		  set tw=79
                 endfunction
 
 "" LILYPOND
