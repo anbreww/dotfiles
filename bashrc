@@ -53,10 +53,8 @@ alias .......='cd ../../../../../..'
 alias pacman='sudo pacman'
 
 # program aliases
-# for SuSE. when I update LimeWire, will change location to /data
-alias limewire='/ubuntu/home/andrew/downloads/programs/LimeWire/runLime.sh'
 alias blog='bzr log | less'
-alias p='ping -c 5 google.com' # quick internet connection test
+alias p='ping -c 1 google.com' # quick internet connection test
 alias worms='cd /home/andrew/.wine/drive_c/Games/wa-newedition;./WA.exe'
 alias ard='cd /home/andrew/documents/programming/arduino/arduino-0010/'
 
