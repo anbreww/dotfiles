@@ -27,7 +27,7 @@ function get_hostname()
 end
 
 function get_weather()
-	local filedescriptor = io.popen('/home/andrew/scripts/accuweather.py')
+	local filedescriptor = io.open('/tmp/aw_cache/weathershort')
 	local temperature = filedescriptor:read()
 	local situation = filedescriptor:read()
 	filedescriptor:close()
@@ -36,7 +36,7 @@ function get_weather()
 end
 
 function get_wmail()
-	local filedescriptor = io.popen('/home/andrew/scripts/checkwmail.py')
+	local filedescriptor = io.open('/tmp/aw_cache/unreadcount')
 	local unread_count = filedescriptor:read()
 	filedescriptor:close()
 
