@@ -1,0 +1,11 @@
+Configuration of Arch and Awesome WM more specifically.
+
+
+== Changing X keyboard layout (add to .xinitrc)
+# setxkbmap ch
+
+== Add support to Awesome for background image
+# pacman xcompmgr
+
+== change awesome background
+# awsetbg /path/to/wallpaper

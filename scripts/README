@@ -1,0 +1,2 @@
+Note : all passwords are stored in a seperate (unversioned) file.
+Use the obfuscate.py script to create password file and manage accounts and passwords for use in other scripts.

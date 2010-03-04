@@ -1,0 +1,17 @@
+#!/bin/bash
+# check for internet connection, return 1 if present, 0 if absent
+UP="up"
+DOWN="down"
+UNKNOWN="n/a"
+
+
+if [[ $(/home/andrew/scripts/check_connection) != 0 ]]; then
+    # ping server at watsons.ch to check if it's up
+    if ping -c 1 watsons.ch &> /dev/null; then
+        echo $UP
+    else
+        echo $DOWN
+    fi
+else
+    echo $UNKNOWN
+fi

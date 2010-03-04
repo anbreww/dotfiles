@@ -1,0 +1,7 @@
+#!/bin/bash
+# check for internet connection, return 1 if present, 0 if absent
+if ping -c 1 64.233.169.103 &> /dev/null; then
+    echo 1
+else
+    echo 0
+fi

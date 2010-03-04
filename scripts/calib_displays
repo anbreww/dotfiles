@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# load colour calibration profiles for monitors
+# (static configuration for each host)
+
+host="$(uname -n)"
+profile_dir="$(dirname $0)/calib_profiles"
+
+if [ $host == "fenrir" ]; then
+    # do nothing since I lost the .icm profile :)
+    echo "blah" >/dev/null
+elif [ $host == "heimdall" ]; then
+    dispwin -d 1 $profile_dir/BenQ.icm
+    dispwin -d 2 $profile_dir/Samsung\ Syncmaster.icm
+fi
+    

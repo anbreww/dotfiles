@@ -1,0 +1,7 @@
+# Todo file for scripts folder
+
+= check for internet connection : if exists, cache status to local files to retrieve when roaming.
+= IP widgets : return something if not connected
+
+!! add a possibility to enter password without echo
+
