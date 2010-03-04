@@ -115,23 +115,18 @@ vicious.register(updatewidget, vicious.widgets.pkg, "$1", 600, "Arch")
 -- package updates
 
 function get_upg()
-    local fp = io.popen("yes|pacman -Sup")
+    local fp = io.open("/tmp/aw_cache/available_updates")
     if not fp then
         return "?"
     end
     local updates = ""
-    for line in fp:lines() do
-        pkg = line:match("[%w]+tp://.*/(.+).pkg.tar.[xg]z")
-        if pkg then
-            updates = updates .. "\n" .. pkg
-        end
-    end
+    updates = fp:read("*all")
     fp:close()
 
     if updates == "" then
         return "System is up to date"
     else
-        return "Available updates:\n" .. updates .. "\n"
+        return "Available updates:\n\n" .. updates 
     end
 end
 
