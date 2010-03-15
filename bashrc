@@ -171,3 +171,4 @@ if [ -f .motd ]; then
 fi
 
 eval `keychain --eval --nogui -Q -q id_rsa`
+export PYTHONDOCS=/usr/share/doc/python/html/
