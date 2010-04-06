@@ -37,6 +37,13 @@
                 " Coloured syntax for apache2 config files
                 au BufRead,BufNewFile /etc/apache2/* set syntax=apache
 
+		au FileType mkd		call FT_markdown()
+
+		function FT_markdown()
+			set ai formatoptions=tcroqn2 comments=n:&gt;
+		endfunction
+
+
 
 
 """ LATEX-SUITE ***
