@@ -38,6 +38,8 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ga
 export PATH=$PATH:/opt/java/bin:/opt/eclipse
 # android on Arch
 export PATH=$PATH:/opt/android-sdk/tools
+# add Microchip C30 tools to path
+export PATH=$PATH:/usr/local/pic/bin
 
 
 # some more ls aliases
@@ -76,6 +78,9 @@ alias einherjer='ssh andrew@192.168.1.66'
 alias bifrost='ssh andrew@192.168.1.11'
 alias brunhild='ssh andrew@192.168.1.65'
 alias s5='ssh tympanon@tympanon.ch'
+
+# resume screen session on webfaction
+alias wf='ssh -t tunebird@tunebird.webfactional.com screen -raAd'
 
 alias wake_aquamarine='etherwake 00:00:00:00:00:00'
 

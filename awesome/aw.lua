@@ -23,7 +23,7 @@ require("wi")
 icon_theme = awful.util.getdir("config") .. "/themes/icons/"
 
 -- This is used later as the default terminal and editor to run.
-terminal = "gnome-terminal"
+terminal = "urxvt"
 browser = "chromium"
 instant_messenger = "pidgin"
 editor = os.getenv("EDITOR") or "vim"
@@ -100,10 +100,12 @@ mymainmenu = awful.menu({
         { "vim", terminal .. " -e vim", icon_theme .. "apps/vim32x32.png" },
         { "chromium", browser, icon_theme .. "apps/chromium.png" },
         { "thunar", "thunar", icon_theme .. "apps/filemanager.png" },
+        { "calib screens", "/home/andrew/scripts/calib_displays" },
         { "-------------", "" },
         { "suspend", "sudo pm-suspend" },
         { "shutdown", "sudo halt" },
         { "reboot", "sudo reboot" },
+        { "reboot to Windows", "sudo /home/andrew/scripts/reboot_to_windows.sh" },
       }
 })
 
