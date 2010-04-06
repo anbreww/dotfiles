@@ -295,6 +295,11 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "i", function () exec(instant_messenger) end),
     awful.key({ modkey,           }, "v", function () exec(terminal .. " -e vim") end),
     awful.key({ modkey, "Control" }, "p", function () exec("sudo pm-suspend")  end),
+    -- global mpc controls
+    awful.key({ modkey, "Shift"   }, "p", function () exec("mpc toggle")  end),
+    -- TODO : fix + key not working...
+    awful.key({ modkey,           }, "+", function () exec("mpc volume +5")  end),
+    awful.key({ modkey, "Shift"   }, "-", function () exec("mpc volume -5")  end),
     -- }}}
 
     -- Standard program
