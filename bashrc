@@ -34,6 +34,11 @@ export LD_LIBRARY_PATH=/usr/lib/j3d/i386
 # add android dev tools to path
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/data/programming/android/current_tools
 
+# java and stuff
+export PATH=$PATH:/opt/java/bin:/opt/eclipse
+# android on Arch
+export PATH=$PATH:/opt/android-sdk/tools
+
 
 # some more ls aliases
 alias ll='ls -lh'
