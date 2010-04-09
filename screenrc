@@ -1,0 +1,10 @@
+autodetach on
+vbell off
+startup_message off
+
+screen -t bash 0 bash
+#screen -t vim  1 bash
+
+backtick 1 5 5 $HOME/scripts/usermem.sh
+
+hardstatus alwayslastline '%{= w}[%{= M}%h %H %{= w}|%{= G} %l %{= w}| %{c}%1`%{w} ] %= %{= w}%-w%{+b r}[ %n*%t ]%{-b r}%{w}%+w %= %{= w}[%{c}%M %d %D %{B}%c%{= w}]'

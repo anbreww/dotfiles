@@ -58,6 +58,7 @@ alias .......='cd ../../../../../..'
 
 # arch aliases
 alias pacman='sudo pacman'
+alias netcfg='sudo netcfg'
 
 # program aliases
 alias blog='bzr log | less'
@@ -81,6 +82,9 @@ alias s5='ssh tympanon@tympanon.ch'
 
 # resume screen session on webfaction
 alias wf='ssh -t tunebird@tunebird.webfactional.com screen -raAd'
+
+# loki : resume or create new screen session
+alias lk='ssh -t andrew@watsons.ch screen -rRaAd'
 
 alias wake_aquamarine='etherwake 00:00:00:00:00:00'
 
