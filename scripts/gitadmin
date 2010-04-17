@@ -1,0 +1,48 @@
+#!/bin/bash
+# init a new git repository and add it to private online repo
+
+if [ "$#" -lt 1 ]; then
+	echo "syntax : gitadmin reponame"
+else
+	echo "Gitadmin: creating '$1'"
+fi
+
+BASEDIR=$(pwd)
+REPONAME=$1
+GITADMINDIR=/data/programming/gitconf/gitosis-admin
+
+echo "starting in $BASEDIR"
+
+### PART 1 : add repository to gitosis admin
+echo "entering GIT-ADMIN folder [ $GITADMINDIR ]"
+cd $GITADMINDIR
+
+# config is currently manual, might pimp this later...
+vim gitosis.conf
+
+git add gitosis.conf
+git commit -m "added repo $REPONAME"
+git push
+
+echo "leaving GIT-ADMIN folder [ $GITADMINDIR ]"
+### PART 2 : init a new repository and push it
+echo "entering BASE folder [ $BASEDIR ]"
+cd $BASEDIR
+
+echo "creating new repository [ $REPONAME ]"
+
+mkdir -p $REPONAME
+
+echo "entering NEW REPO folder [ $REPONAME ]"
+cd $REPONAME
+
+git init 
+git remote add origin tig@wf.tunebird.net:$REPONAME.git
+touch README
+git add README
+git commit -m "initial commit"
+git push origin master:refs/heads/master
+
+echo "###  NEW REPOSITORY CREATED  ###"
+echo "### NOW START CODING ALREADY ###"
+
