@@ -28,6 +28,7 @@ browser = "chromium"
 instant_messenger = "pidgin"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
+musicinit = "sudo /etc/rc.d/mpd start && mpc pause && sudo /etc/rc.d/mpdas start"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -294,6 +295,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "b", function () exec(browser) end),
     awful.key({ modkey,           }, "i", function () exec(instant_messenger) end),
     awful.key({ modkey,           }, "v", function () exec(terminal .. " -e vim") end),
+    awful.key({ modkey,           }, "p", function () exec(musicinit) end),
     awful.key({ modkey, "Control" }, "p", function () exec("sudo pm-suspend")  end),
     -- global mpc controls
     awful.key({ modkey, "Shift"   }, "p", function () exec("mpc toggle")  end),

@@ -132,6 +132,10 @@
 		map  <F8> :tabnext<CR>
 
 		nnoremap <silent> <F9> :TlistToggle<CR>
+        " exit if taglist is the last window open
+        let Tlist_Exit_OnlyWindow = 1
+        " only show tags for the current buffer
+        let Tlist_Show_One_File = 1
 
 """ SESSIONS ***
 
