@@ -1,7 +1,8 @@
 " fix input of é, â, etc
 
-" \item
-imap <C-i> <Plug>Tex_InsertItemOnThisLine
+" \item THIS BREAKS TAB BEHAVIOUR
+"imap <C-i> <Plug>Tex_InsertItemOnThisLine
+imap <C-x> <Plug>Tex_InsertItemOnThisLine
 " \mathbf
 imap <C-b> <Plug>Tex_MathBF
 " \cite
