@@ -8,10 +8,6 @@
 "
 " CVS: $Id: bib_latexSuite.vim 997 2006-03-20 09:45:45Z srinathava $
 
-if exists('did_latexSuite_disabled')
-  finish
-endif
-
 " source main.vim because we need a few functions from it.
 runtime ftplugin/latex-suite/main.vim
 " Disable smart-quotes because we need to enter real quotes in bib files.

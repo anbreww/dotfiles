@@ -95,10 +95,6 @@
 "--------------------------------------%<--------------------------------------
 " }}}
 
-if exists('did_latexSuite_disabled')
-  finish
-endif
-
 " line continuation used here.
 let s:save_cpo = &cpo
 set cpo&vim

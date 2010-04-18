@@ -11,28 +11,28 @@ import os
 import sys
 import StringIO
 
-# includeFile {{{
-def includeFile(fname):
+# getFileContents {{{
+def getFileContents(fname):
     if type(fname) is not str:
         fname = fname.group(3)
 
-    (root, ext) = os.path.splitext(fname)
+    # If neither the file or file.tex exists, then we just give up.
+    if not os.path.isfile(fname):
+        if os.path.isfile(fname + '.tex'):
+            fname += '.tex'
+        else:
+            return ''
 
-    if not ext:
-        return getFileContents(fname + '.tex')
-    else:
-        return getFileContents(fname)
-
-# }}}
-# getFileContents {{{
-def getFileContents(fname):
-    # This longish thing is to make sure that all files are converted into
-    # \n seperated lines.
-    contents = '\n'.join(open(fname).read().splitlines())
+    try:
+        # This longish thing is to make sure that all files are converted into
+        # \n seperated lines.
+        contents = '\n'.join(open(fname).read().splitlines())
+    except IOError:
+        return ''
 
     # TODO what are all the ways in which a tex file can include another?
     pat = re.compile(r'^\\(@?)(include|input){(.*?)}', re.M)
-    contents = re.sub(pat, includeFile, contents)
+    contents = re.sub(pat, getFileContents, contents)
 
     return ('%%==== FILENAME: %s' % fname) + '\n' + contents
 
@@ -41,7 +41,8 @@ def getFileContents(fname):
 def stripComments(contents):
     # remove all comments except those of the form
     # %%==== FILENAME: <filename.tex>
-    uncomm = [re.sub('%(?!==== FILENAME: ).*', '', line) for line in contents.splitlines()]
+    # BUG: This comment right after a new paragraph is not recognized: foo\\%comment
+    uncomm = [re.sub('(?<!\\\\)%(?!==== FILENAME: ).*', '', line) for line in contents.splitlines()]
     # also remove all only-whitespace lines.
     nonempty = [line for line in uncomm if line.strip()]
 
@@ -150,7 +151,7 @@ def getSectionLabels(lineinfo,
     # section_text]
 
     rettext = getSectionLabels(sections[0], sectypes[1:], section_prefix, label_prefix)
-    
+ 
     for i in range(1,len(sections),2):
         sec_num = (i+1)/2
         section_name = re.search(r'\\%s{(.*?)}' % sectypes[0], sections[i]).group(1)

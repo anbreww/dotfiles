@@ -61,10 +61,6 @@
 " in version 0.1
 " - First version
 
-if exists('did_latexSuite_disabled')
-  finish
-endif
-
 " Has this already been loaded ?
 if exists("loaded_libList")
        finish

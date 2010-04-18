@@ -87,10 +87,6 @@
 " call defines the region which is deepest in the folding. See MakeTexFolds()
 " for an idea of how this works for latex files.
 
-if exists('did_latexSuite_disabled')
-  finish
-endif
-
 " Function: AddSyntaxFoldItem (start, end, startoff, endoff [, skipStart, skipEnd]) {{{
 function! AddSyntaxFoldItem(start, end, startoff, endoff, ...)
 	if a:0 > 0

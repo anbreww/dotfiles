@@ -43,10 +43,6 @@
 "
 " }}} 
 
-if exists('did_latexSuite_disabled')
-  finish
-endif
-
 " Delete the next line to avoid the special indention of items
 if !exists("g:tex_indent_items")
   let g:tex_indent_items = 1
