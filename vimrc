@@ -34,6 +34,9 @@
                 au BufRead,BufNewFile */avr/*.[ch] call FT_avr()
                 au BufRead,BufNewFile */avr/*.cpp call FT_avr()
 
+		" Temp functions for c tutorials
+		au BufRead,BufNewFile */learning-c/*.c call FT_lrnc()
+
                 " Coloured syntax for apache2 config files
                 au BufRead,BufNewFile /etc/apache2/* set syntax=apache
 
@@ -96,6 +99,14 @@
 
 		" lazy mode - return to vim directly
 		" map <F6> :w<CR>:!make && ./project.x<CR><CR>
+		"
+		function FT_lrnc()
+		  map <F5> :w<CR>:!gcc -Wall % -o %:t:r.x && ./%:t:r.x<CR>
+                  retab 4 | set shiftwidth=4
+		  set expandtab
+		  set tabstop=4
+		  set softtabstop=4
+	  	endfunction
 
 
 """ AVR MICROCONTROLLER keys ***
