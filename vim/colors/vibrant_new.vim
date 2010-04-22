@@ -24,7 +24,7 @@ if exists("syntax_on")
    syntax reset
 endif
 
-let g:colors_name = "vibrantink"
+let g:colors_name = "vibrant_new"
 
 if has("gui_running")
     highlight Normal guifg=White   guibg=Black
@@ -51,8 +51,8 @@ else
     highlight Cursor ctermfg=Black ctermbg=Yellow 
     highlight Keyword ctermfg=Yellow 
     highlight Define ctermfg=202 
-    highlight Comment ctermfg=98
-    highlight Type ctermfg=Red 
+    highlight Comment ctermfg=105
+    highlight Type ctermfg=208 
     highlight rubySymbol ctermfg=66 
     highlight Identifier ctermfg=Green 
     highlight rubyStringDelimiter ctermfg=82 
