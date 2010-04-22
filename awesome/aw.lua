@@ -210,12 +210,12 @@ for s = 1, screen.count() do
                 separator, updatewidget, updateicon,
                 separator, wmailwidget, wmailicon,
                 separator, volwidget, volicon,
-                hostname == "fenrir" and separator or nil,
-                hostname == "fenrir" and batwidget or nil,
-                hostname == "fenrir" and baticon or nil, 
-                hostname == "fenrir" and separator or nil,
-                hostname == "fenrir" and wifiwidget or nil,
-                hostname == "fenrir" and wifiicon or nil, 
+                hostname == "bragi" and separator or nil,
+                hostname == "bragi" and batwidget or nil,
+                hostname == "bragi" and baticon or nil, 
+                hostname == "bragi" and separator or nil,
+                hostname == "bragi" and wifiwidget or nil,
+                hostname == "bragi" and wifiicon or nil, 
 
         s == screen.count() and mysystray or nil, -- systray only on last screen
         mytasklist[s],

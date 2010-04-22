@@ -77,7 +77,7 @@ baticon = widget({ type = "imagebox" })
 baticon.image = image(beautiful.widget_bat)
 
 batwidget = widget({ type = "textbox" })
-vicious.register(batwidget, vicious.widgets.bat, "$1$2%", 61, "BAT0")
+vicious.register(batwidget, vicious.widgets.bat, "$1$2% \($3\)", 61, "BAT0")
 -- }}}
 
 -- Network usage widget
@@ -97,7 +97,7 @@ elseif hostname == "heimdall" then
             '<span color="#CC9393">${eth1 down_kb}</span> <span color="#7F9F7F">${eth1 up_kb}</span>', 1)
 else 
     vicious.register(netwidget, vicious.widgets.net,
-            '<span color="#CC9393">${eth0 down_kb}</span> <span color="#7F9F7F">${eth0 up_kb}</span>', 1)
+            '<span color="#CC9393">${wlan0 down_kb}</span> <span color="#7F9F7F">${wlan0 up_kb}</span>', 1)
 end
 
 --- {{{ Loki status widget
@@ -106,7 +106,7 @@ vicious.register(lokiwidget, get_loki, "$1", 300)
 
 
 -- {{{ WiFi widget
-if hostname == "fenrir" then
+if hostname == "bragi" then
     wifiicon = widget ({ type = "imagebox" })
     wifiicon.image = image(beautiful.widget_wifi)
     wifiwidget = widget({ type = "textbox" })
@@ -186,14 +186,14 @@ wmailicon.image = image(beautiful.widget_mail)
 mpdwidget = widget({ type = "textbox" })
 mpdicon	  = widget({ type = "imagebox" })
 mpdicon.image = image(beautiful.widget_phones)
-vicious.register(mpdwidget, vicious.widgets.mpd, "$1", 1, 70 )
+vicious.register(mpdwidget, vicious.widgets.mpd, "[${state}] ${Artist} - ${Album}", 1, {} )
 ---}}}
 --
 -- {{{ volume level 
 volicon = widget({ type = "imagebox" })
 volicon.image = image(beautiful.widget_vol)
 volwidget = widget({ type = "textbox" })
-vicious.enable_caching(vicious.widgets.volume)
+--vicious.enable_caching(vicious.widgets.volume)
 vicious.register(volwidget, vicious.widgets.volume, "$1%", 1, "Master")
 -- Register mouse buttons
 volwidget:buttons(awful.util.table.join(

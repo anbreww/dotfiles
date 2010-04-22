@@ -9,7 +9,8 @@
 -- {{{ Main
 theme = {}
 theme.confdir		= awful.util.getdir("config") .. "/themes"
-theme.wallpaper_cmd = { "awsetbg /usr/share/awesome/themes/zenburn/zenburn-background.png" }
+--theme.wallpaper_cmd = { "awsetbg /usr/share/awesome/themes/zenburn/zenburn-background.png" }
+theme.wallpaper_cmd = { "awsetbg /home/andrew/pictures/wallpapers/current" }
 -- }}}
 
 -- {{{ Styles
