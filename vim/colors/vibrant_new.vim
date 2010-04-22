@@ -52,7 +52,7 @@ else
     highlight Keyword ctermfg=Yellow 
     highlight Define ctermfg=202 
     highlight Comment ctermfg=105
-    highlight Type ctermfg=208 
+    highlight Type ctermfg=214 
     highlight rubySymbol ctermfg=66 
     highlight Identifier ctermfg=Green 
     highlight rubyStringDelimiter ctermfg=82 
