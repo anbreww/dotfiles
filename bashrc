@@ -23,6 +23,7 @@ fi
 
 # make VIM my favourite editor
 export EDITOR=vim
+alias vi='vim'
 
 # add MONO to path, mostly for Giver
 export MONO_PATH=/usr/local/lib/mono/notify-sharp
@@ -59,6 +60,7 @@ alias .......='cd ../../../../../..'
 # arch aliases
 alias pacman='sudo pacman'
 alias netcfg='sudo netcfg'
+alias go='sudo netcfg epflwpa && ./scripts/crons.sh && startx'
 
 # program aliases
 alias blog='bzr log | less'
@@ -66,6 +68,7 @@ alias p='ping -c 1 google.com' # quick internet connection test
 alias worms='cd /home/andrew/.wine/drive_c/Games/wa-newedition;./WA.exe'
 alias ard='cd /home/andrew/documents/programming/arduino/arduino-0010/'
 alias xb="cd /data/programming/avr/quadmatrix/xbeematrix/pycode"
+
 
 # EPFL aliases
 alias epfl='vpn'
