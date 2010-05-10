@@ -243,6 +243,17 @@
 	  "     if os.path.isdir(p):
 	  "   	  vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
 	  " EOF
+	  "
+	  " more natural keybindings for jumping between tags
+	  " use :tags to see previously visited tags
+	  map <silent><C-Left> <C-T>
+	  map <silent><C-Right> <C-]>
+	  " map C-Space to omnicomplete
+	  inoremap <Nul> <C-x><C-o>
+
+	  " type :make to get a list of syntax errors
+	  autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\" 
+	  autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m 
 	endfunction
 
 "" LILYPOND
