@@ -28,6 +28,9 @@ end
 
 function get_weather()
 	local filedescriptor = io.open('/tmp/aw_cache/weathershort')
+	if not filedescriptor then
+		return {"n/a","n/a"}
+	end
 	local temperature = filedescriptor:read()
 	local situation = filedescriptor:read()
 	filedescriptor:close()
@@ -37,6 +40,9 @@ end
 
 function get_loki()
     local filedescriptor = io.open('/tmp/aw_cache/loki_status')
+    if not filedescriptor then
+	    return "n/a"
+    end
     local loki_status = filedescriptor:read()
     filedescriptor:close()
 
@@ -58,6 +64,9 @@ end
 
 function get_wmail()
 	local filedescriptor = io.open('/tmp/aw_cache/unreadcount')
+	if not filedescriptor then
+		return "?"
+	end
 	local unread_count = filedescriptor:read()
 	filedescriptor:close()
 
