@@ -34,8 +34,11 @@
 	au BufRead,BufNewFile */{avr,robopoly}/*.[ch] call FT_avr()
 	au BufRead,BufNewFile */{avr,robopoly}/*.cpp call FT_avr()
 
-	" Temp functions for c tutorials
-	au BufRead,BufNewFile */learning-c/*.c call FT_lrnc()
+" Temp functions for c tutorials
+au BufRead,BufNewFile */learning-c/*.c call FT_lrnc()
+
+" Coloured syntax for apache2 config files
+au BufRead,BufNewFile /etc/apache2/* set syntax=apache
 
 	" Coloured syntax for apache2 config files
 	au BufRead,BufNewFile /etc/apache2/* set syntax=apache

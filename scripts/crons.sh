@@ -1,6 +1,8 @@
 #!/bin/bash
 # scripts to execute every 5 minutes from cron
 
+# requires : python3 httplib2
+
 # make sure cache dir exists
 mkdir -p /tmp/aw_cache
 
