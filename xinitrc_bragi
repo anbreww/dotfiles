@@ -11,3 +11,6 @@
 setxkbmap ch fr
 #~/scripts/calib_displays
 exec awesome 
+
+# install mingetty from yaourt and change a line in /etc/inittab
+# to get automatic login to terminal
