@@ -39,32 +39,36 @@ if has("gui_running")
     highlight rubyInterpolation guifg=White
     highlight rubyPseudoVariable guifg=#339999
     highlight Constant guifg=#FFEE98
-    highlight Function guifg=#FFCC00 gui=NONE
-    highlight Include guifg=#FFCC00 gui=NONE
-    highlight Statement guifg=#FF6600 gui=NONE
-    highlight String guifg=#66FF00
-    highlight Search guibg=White
-    highlight CursorLine guibg=#323300
+    highlight Function	guifg=#FFCC00 gui=NONE
+    highlight Include	guifg=#FFCC00 gui=NONE
+    highlight Statement	guifg=#FF6600 gui=NONE
+    highlight String	guifg=#66FF00
+    highlight Search	guibg=White
+    highlight CursorLine	guibg=#323300
 else
     set t_Co=256
-    highlight Normal ctermfg=White ctermbg=Black 
-    highlight Cursor ctermfg=Black ctermbg=Yellow 
-    highlight Keyword ctermfg=Yellow 
-    highlight Define ctermfg=202 
-    highlight Comment ctermfg=105
-    highlight Type ctermfg=214 
-    highlight rubySymbol ctermfg=66 
-    highlight Identifier ctermfg=Green 
-    highlight rubyStringDelimiter ctermfg=82 
-    highlight rubyInterpolation ctermfg=White 
-    highlight rubyPseudoVariable ctermfg=66 
-    highlight Constant ctermfg=228 
-    highlight Function cterm=bold ctermfg=220 
-    highlight Include cterm=bold ctermfg=220 
-    highlight Statement ctermfg=202
-    highlight String ctermfg=82 
-    highlight Search ctermbg=White 
-    highlight CursorLine cterm=NONE ctermbg=235
-    highlight vimHiKeyList ctermfg=45
-    highlight Operator cterm=bold ctermfg=darkmagenta
+    highlight Normal		ctermfg=White 
+    highlight Cursor		ctermfg=Black	ctermbg=Yellow 
+    highlight Keyword		ctermfg=Yellow 
+    highlight Define		ctermfg=203 
+    highlight Comment		ctermfg=105
+    highlight Type		ctermfg=214	cterm=bold
+    highlight Identifier	ctermfg=Green 
+    highlight Constant		ctermfg=227 
+    highlight Function		cterm=bold	ctermfg=221 
+    highlight Include		cterm=bold	ctermfg=220 
+    highlight Statement		cterm=bold 	ctermfg=202
+    highlight String		ctermfg=82 
+    highlight Search		ctermbg=White 
+    highlight CursorLine	cterm=NONE	ctermbg=235
+    highlight vimHiKeyList	ctermfg=45
+    highlight Operator		cterm=bold	ctermfg=9
+    highlight Todo		cterm=bold
+    highlight PreProc		ctermfg=51
+    highlight Special		ctermfg=7
+    highlight Delimiter		ctermfg=12
+    highlight rubySymbol	ctermfg=66 
+    highlight rubyInterpolation	ctermfg=White 
+    highlight rubyStringDelimiter	ctermfg=82 
+    highlight rubyPseudoVariable	ctermfg=66 
 endif
