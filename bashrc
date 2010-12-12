@@ -60,12 +60,19 @@ alias .......='cd ../../../../../..'
 alias pacman='sudo pacman'
 alias netcfg='sudo netcfg'
 
+# moving to ubuntu...
+alias pacman='sudo apt-get'
+
 # program aliases
 alias blog='bzr log | less'
 alias p='ping -c 1 google.com' # quick internet connection test
 alias worms='cd /home/andrew/.wine/drive_c/Games/wa-newedition;./WA.exe'
+
+# folder aliases
 alias ard='cd /home/andrew/documents/programming/arduino/arduino-0010/'
 alias xb="cd /data/programming/avr/quadmatrix/xbeematrix/pycode"
+alias pr="cd /data/programming"
+alias rb="cd /data/programming/robopoly"
 
 # EPFL aliases
 alias epfl='vpn'
