@@ -41,6 +41,9 @@ export PATH=$PATH:/opt/android-sdk/tools
 # add Microchip C30 tools to path
 export PATH=$PATH:/usr/local/pic/bin
 
+# add my user scripts to path
+export PATH=$PATH:~/scripts
+
 
 # some more ls aliases
 alias ll='ls -lh'
