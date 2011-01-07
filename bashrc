@@ -77,6 +77,13 @@ alias xb="cd /data/programming/avr/quadmatrix/xbeematrix/pycode"
 alias pr="cd /data/programming"
 alias rb="cd /data/programming/robopoly"
 
+# folders for semester project
+alias gt="cd /data/semester-proj/code/gateway"
+alias nd="cd /data/semester-proj/code/initial_tests"
+alias lb="cd /data/semester-proj/code/project_libs"
+alias rp="cd /data/semester-proj/report && vim semproj.tex"
+alias rd="cd /data/semester-proj/report"
+
 # EPFL aliases
 alias epfl='vpn'
 alias vpn='sudo vpnc-connect'
@@ -90,6 +97,8 @@ alias einherjer='ssh andrew@192.168.1.66'
 alias bifrost='ssh andrew@192.168.1.11'
 alias brunhild='ssh andrew@192.168.1.65'
 alias s5='ssh tympanon@tympanon.ch'
+alias temploki='ssh andrew@192.168.1.89'
+alias tl='temploki'
 
 # resume screen session on webfaction
 alias wf='ssh -t tunebird@tunebird.webfactional.com screen -raAd'
