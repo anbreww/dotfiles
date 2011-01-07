@@ -8,6 +8,7 @@
                 " smoother changes
                 set ttyfast
                 colorscheme vibrant_new
+
                 map -hl  :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name")
                     \ . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . ">
                     \ lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
@@ -59,6 +60,11 @@
                 "    \ && pdflatex % && evince %:t:r.pdf<CR>
 
                 map <F3> :w<CR>:!make pdf<CR>
+                map <F12> :w<CR>:!make pdfquiet<CR>
+                map <S-F12> :w<CR>:!make bib<CR>
+
+		" parse tex files for todo items
+		map <F10> :!make todo<CR>
 
                 endfunction
 
