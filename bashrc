@@ -72,6 +72,11 @@ alias p='ping -c 1 google.com' # quick internet connection test
 alias p6='ping6 -c 1 ipv6.google.com' # quick internet connection test
 alias worms='cd /home/andrew/.wine/drive_c/Games/wa-newedition;./WA.exe'
 
+# editor aliases
+alias e='vim'
+alias vrc='vim ~/.vimrc'
+alias brc='vim ~/.bashrc'
+
 alias ip6='ip -6'
 
 # folder aliases
