@@ -7,5 +7,5 @@ augroup END
 
 " Markdown Syntax
 augroup markdown
-	au! BufNewFile,BufRead *.md	setf mkd
+	au! BufNewFile,BufRead *.md,*.mkd	setf mkd
 augroup END

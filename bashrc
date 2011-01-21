@@ -41,6 +41,9 @@ export PATH=$PATH:/opt/android-sdk/tools
 # add Microchip C30 tools to path
 export PATH=$PATH:/usr/local/pic/bin
 
+# add my user scripts to path
+export PATH=$PATH:~/scripts
+
 
 # some more ls aliases
 alias ll='ls -lh'
@@ -60,13 +63,29 @@ alias .......='cd ../../../../../..'
 alias pacman='sudo pacman'
 alias netcfg='sudo netcfg'
 
+# moving to ubuntu...
+alias pacman='sudo apt-get'
+
 # program aliases
 alias blog='bzr log | less'
 alias p='ping -c 1 google.com' # quick internet connection test
-alias p6='ping6 -c 1 ipv6.google.com'
+alias p6='ping6 -c 1 ipv6.google.com' # quick internet connection test
 alias worms='cd /home/andrew/.wine/drive_c/Games/wa-newedition;./WA.exe'
+
+alias ip6='ip -6'
+
+# folder aliases
 alias ard='cd /home/andrew/documents/programming/arduino/arduino-0010/'
 alias xb="cd /data/programming/avr/quadmatrix/xbeematrix/pycode"
+alias pr="cd /data/programming"
+alias rb="cd /data/programming/robopoly"
+
+# folders for semester project
+alias gt="cd /data/semester-proj/code/gateway"
+alias nd="cd /data/semester-proj/code/initial_tests"
+alias lb="cd /data/semester-proj/code/project_libs"
+alias rp="cd /data/semester-proj/report && vim semproj.tex"
+alias rd="cd /data/semester-proj/report"
 
 # EPFL aliases
 alias epfl='vpn'
@@ -81,6 +100,8 @@ alias einherjer='ssh andrew@192.168.1.66'
 alias bifrost='ssh andrew@192.168.1.11'
 alias brunhild='ssh andrew@192.168.1.65'
 alias s5='ssh tympanon@tympanon.ch'
+alias temploki='ssh andrew@192.168.1.89'
+alias tl='temploki'
 
 # resume screen session on webfaction
 alias wf='ssh -t tunebird@tunebird.webfactional.com screen -raAd'
