@@ -113,6 +113,7 @@
 
                 function FT_avr()
 
+		  call FT_lrnc()
                   "echo "Including AVR C macros! F5 to make hex, F6 to download"
                   " make hex file
                   map <F5> :w<CR>:make hex<CR>
