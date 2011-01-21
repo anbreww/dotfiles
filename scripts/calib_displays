@@ -10,7 +10,7 @@ if [ $host == "fenrir" ]; then
     # do nothing since I lost the .icm profile :)
     echo "blah" >/dev/null
 elif [ $host == "heimdall" ]; then
-    dispwin -d 1 $profile_dir/BenQ.icm
-    dispwin -d 2 $profile_dir/Samsung\ Syncmaster.icm
+    dispwin -d 2 $profile_dir/BenQ.icm
+    dispwin -d 1 $profile_dir/ZR24w.icm
 fi
     
