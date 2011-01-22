@@ -20,6 +20,14 @@
 	""" WILD MENU !! ***
 	set wildmenu
 """ ADD-ONS ***
+
+	" pathogen : place all addons in .vim/bundles
+	filetype off
+
+	call pathogen#runtime_append_all_bundles()
+	call pathogen#helptags()
+	
+
 	filetype plugin on
 	filetype indent on
 	let mapleader = "§"
@@ -47,8 +55,6 @@
 		set ai formatoptions=tcroqn2 comments=n:&gt;
 	endfunction
 
-	" pathogen : place all addons in .vim/bundles
-	call pathogen#runtime_append_all_bundles()
 
 
 
