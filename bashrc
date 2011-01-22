@@ -32,7 +32,7 @@ export CLASSPATH=/usr/lib/j3d/ext/j3dcore.jar:/usr/lib/j3d/ext/j3dutils.jar:/usr
 export LD_LIBRARY_PATH=/usr/lib/j3d/i386
 
 # add android dev tools to path
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/data/programming/android/current_tools
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/data/programming/android/current_tools
 
 # java and stuff
 export PATH=$PATH:/opt/java/bin:/opt/eclipse
@@ -64,7 +64,7 @@ alias pacman='sudo pacman'
 alias netcfg='sudo netcfg'
 
 # moving to ubuntu...
-alias pacman='sudo apt-get'
+#alias pacman='sudo apt-get'
 
 # program aliases
 alias blog='bzr log | less'
