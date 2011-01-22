@@ -71,4 +71,5 @@ else
     highlight rubyInterpolation	ctermfg=White 
     highlight rubyStringDelimiter	ctermfg=82 
     highlight rubyPseudoVariable	ctermfg=66 
+    highlight ColorColumn	ctermbg=235
 endif

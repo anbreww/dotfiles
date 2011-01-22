@@ -55,6 +55,19 @@
 		set ai formatoptions=tcroqn2 comments=n:&gt;
 	endfunction
 
+	
+
+
+""" Version 7.3 specific stuff ****
+
+	if version >= 703
+		" coloured column to show max line length
+		set colorcolumn=80
+
+		" relative line numbering
+		set rnu
+	endif
+
 
 
 
