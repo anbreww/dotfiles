@@ -32,6 +32,13 @@
 	filetype indent on
 	let mapleader = "§"
 
+	" set Grep to always generate a filename (for vim-latex)
+	set grepprg=grep\ -nH\ $*
+
+	" empty .tex defaults to 'plaintex', and vim-latex does not load.
+	" this changes the default back to 'tex'
+	let g:tex_flavor='latex'
+
 
 """ FILETYPES ***
 	au FileType tex         call FT_latex()
@@ -58,15 +65,6 @@
 	
 
 
-""" Version 7.3 specific stuff ****
-
-	if version >= 703
-		" coloured column to show max line length
-		set colorcolumn=80
-
-		" relative line numbering
-		set rnu
-	endif
 
 
 
@@ -203,6 +201,8 @@ let Tlist_Show_One_File = 1
 	map Q gq
 	set formatoptions=rcqan1
 
+	set foldcolumn=3
+
 """ SEARCH ***
 
 	set ignorecase smartcase " see :help 27.1
@@ -227,6 +227,16 @@ let Tlist_Show_One_File = 1
 	" set cursorline
 	" hi cursorline guibg=#333333
 	set wildmenu " cool menu thingie
+
+""" Version 7.3 specific stuff ****
+
+	if version >= 703
+		" coloured column to show max line length
+		set colorcolumn=80
+
+		" relative line numbering
+		set rnu
+	endif
 
 """ MISC BACKWARD-COMPATIBILITY
 
