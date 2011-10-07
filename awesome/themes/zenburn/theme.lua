@@ -104,8 +104,8 @@ theme.taglist_squares_unsel = theme.confdir .. "/zenburn/taglist/squarez.png"
 
 -- {{{ Misc
 theme.awesome_icon           = theme.confdir .. "/zenburn/awesome-icon.png"
-theme.menu_submenu_icon      = theme.confdir .. "/default/submenu.png"
-theme.tasklist_floating_icon = theme.confdir .. "/default/tasklist/floatingw.png"
+theme.menu_submenu_icon      = theme.confdir .. "/zenburn/submenu.png"
+theme.tasklist_floating_icon = theme.confdir .. "/zenburn/tasklist/floatingw.png"
 -- }}}
 
 -- {{{ Layout
