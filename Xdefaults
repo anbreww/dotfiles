@@ -61,3 +61,5 @@ URxvt*scrollTtyOutput: False
 URxvt*scrollTtyKeypress: True
 URxvt*secondaryScroll: True
 URxvt*saveLines: 8000
+
+URxvt*termName: rxvt-256color
