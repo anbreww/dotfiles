@@ -107,9 +107,10 @@ alias brunhild='ssh andrew@192.168.1.65'
 alias s5='ssh tympanon@tympanon.ch'
 alias temploki='ssh andrew@192.168.1.89'
 alias tl='temploki'
+alias asgard='ssh root@192.168.1.1'
 
-# resume screen session on webfaction
-alias wf='ssh -t tunebird@tunebird.webfactional.com screen -raAd'
+# resume screen session on webfaction (specify Unicode)
+alias wf='ssh -t tunebird@tunebird.webfactional.com screen -raAdU'
 
 # loki : resume or create new screen session
 alias lk='ssh -t andrew@watsons.ch screen -rRaAd'
