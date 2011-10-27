@@ -62,12 +62,18 @@
 		set ai formatoptions=tcroqn2 comments=n:&gt;
 	endfunction
 
-	
 
+""" Doxygen stuffs ***
+" load syntax highlighting by default
+let g:load_doxygen_syntax=1
 
-
-
-
+let g:DoxygenToolkit_briefTag_pre="@brief  "
+let g:DoxygenToolkit_paramTag_pre="@param "
+let g:DoxygenToolkit_returnTag="@returns   "
+"let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------"
+"let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------"
+let g:DoxygenToolkit_authorName="Andrew Watson (andy@watsons.ch)"
+let g:DoxygenToolkit_licenseTag="My own license"
 
 
 """ LATEX-SUITE ***
