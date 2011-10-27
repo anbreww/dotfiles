@@ -113,7 +113,15 @@ alias asgard='ssh root@192.168.1.1'
 alias wf='ssh -t tunebird@tunebird.webfactional.com screen -raAdU'
 
 # loki : resume or create new screen session
-alias lk='ssh -t andrew@watsons.ch screen -rRaAd'
+alias lk='ssh -t andrew@watsons.ch screen -rRaAdU'
+
+# screen on sigyn
+alias sigyn='ssh -t mansfeld@sigyn.watsons.ch screen -rRaAdU'
+
+# screen on robopoly server
+alias rbpapi='ssh -t root@rbpolysrv1.epfl.ch screen -raAdU api'
+alias rbplog='ssh -t root@rbpolysrv1.epfl.ch screen -raAdU log'
+alias rbpn='ssh root@rbpolysrv1.epfl.ch'
 
 alias wake_aquamarine='etherwake 00:00:00:00:00:00'
 
