@@ -12,4 +12,8 @@
 	st = status
 	last = log -1 HEAD
 [core]
-	autocrlf = input
+	autocrlf = input	# commit unix-style line endings
+[push]
+	default = tracking	# only push active branch
+[pack]
+	threads = 0		# use multiple cores for packing
