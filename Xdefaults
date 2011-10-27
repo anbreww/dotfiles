@@ -33,7 +33,7 @@ URxvt.color10 : #8A8AE2E23434
 URxvt.color3  : #C4C4A0A00000
 URxvt.color11 : #FCFCE9E94F4F
 ! blue
-URxvt.color4  : #34346565A4A4
+URxvt.color4  : #59599797E7E7
 URxvt.color12 : #72729F9FCFCF
 ! magenta
 URxvt.color5  : #757550507B7B
