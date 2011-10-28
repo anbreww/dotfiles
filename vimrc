@@ -6,11 +6,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-""" LANGUAGE-DEPENDENT INDENTATION ***
-        filetype plugin indent on
-
 " Pathogen {
   filetype off
+
 
   " place all addons in .vim/bundles
   call pathogen#runtime_append_all_bundles()
@@ -87,8 +85,10 @@
                                         " Use :hlsearch to use it once.
 " }
 
-
-" set Grep to always generate a filename (for vim-latex)
+" Status line {
+  set laststatus=2                      " always show status bar
+  set statusline=%f%m%r%h%w\ [LEN=%L]\ [FMT=%{&ff}]\ [ENC=%{&fileencoding}]\ [TYP=%Y]\ [0x%B,%3b]\ [POS=%04l,%04v][%p%%]
+" }
 
 " Utilities {
   set grepprg=grep\ -nH\ $*             " grep always prefixes the filename
@@ -107,6 +107,9 @@
   let g:DoxygenToolkit_licenseTag="My own license"
 " }
 
+
+""" LANGUAGE-DEPENDENT INDENTATION ***
+        filetype plugin indent on
 
 """ ADD-ONS ***
 filetype plugin on
