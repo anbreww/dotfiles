@@ -84,13 +84,14 @@ alias ard='cd /home/andrew/documents/programming/arduino/arduino-0010/'
 alias xb="cd /data/programming/avr/quadmatrix/xbeematrix/pycode"
 alias pr="cd /data/programming"
 alias rb="cd /data/programming/robopoly"
+alias api="cd /data/programming/python/api"
 
 # folders for semester project
 alias gt="cd /data/semester-proj/code/gateway"
 alias nd="cd /data/semester-proj/code/initial_tests"
 alias lb="cd /data/semester-proj/code/project_libs"
-alias rp="cd /data/semester-proj/report && vim semproj.tex"
-alias rd="cd /data/semester-proj/report"
+alias rp="cd /data/master-proj/ && vim thesis-andrew.tex"
+alias rd="cd /data/master-proj/"
 
 # EPFL aliases
 alias epfl='vpn'
