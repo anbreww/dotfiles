@@ -54,8 +54,10 @@
 " }
 
 " Formatting {
-  map Q gq                              " quick paragraph formatting
+  map Q gq
+                                        " quick paragraph formatting
   set formatoptions=r                   " insert comment leader after enter
+  set formatoptions+=t                  " auto-wrap text using textwidth
   set formatoptions+=c                  " recognize comments using textwidth
   set formatoptions+=q                  " allow formatting of comments with gq
   set formatoptions+=n                  " recognize numbered lists
@@ -150,7 +152,8 @@ function FT_latex()
 "map <F3> :w<CR>:!pdflatex % && pdflatex % && bibtex %:t:r
 "    \ && pdflatex % && evince %:t:r.pdf<CR>
 
-map <F3> :w<CR>:!make pdf<CR>
+map <F2> :w<CR>:!make quick<CR>
+map <F3> :w<CR>:!make<CR>
 map <F12> :w<CR>:!make pdfquiet<CR>
 map <S-F12> :w<CR>:!make bib<CR>
 
