@@ -26,7 +26,6 @@
 
 " UI {
   set t_Co=256                          " 256 colours in terminal!
-  colorscheme vibrant_new               " set colour scheme
   set wildmenu                          " 'graphical' menu in the status bar
   set mouse=a                           " allow use of mouse
   set number                            " line numbering
@@ -41,6 +40,7 @@
     set colorcolumn=80                  " line length marker
     set rnu                             " relative line numbering
   endif
+  colorscheme molokai                   " set colour scheme
 " }
 
 " GUI options {
