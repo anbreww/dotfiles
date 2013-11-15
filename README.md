@@ -30,3 +30,26 @@ all previous bundles:
     git submodule update
 
 TODO : update install script to check for existing files, prompt to backup, and create symlinks if they don't already exist
+
+## Terminal
+
+A few things need to be adjusted for everything to look good.
+
+### Encoding
+
+The terminal must be set to UTF-8 and 256 color. In PuTTY,
+
+    Translation > Remote Charset > UTF-8
+    Colours > Allow terminal to use xterm 256-colour mode
+    Connection Data > terminal-type string > "xterm-256color"
+
+In addition, the host OS must be set to a UTF-8 locale ( `en_US.UTF-8` ).
+GNU Screen must have been compiled with 256 colour support.
+
+### Font
+
+The `vim-powerline` add-on requires a patched font to display special symbols.
+Install one from the [powerline-fonts][1] repository and set PuTTY to use it.
+
+
+[1]: https://github.com/Lokaltog/powerline-fonts
