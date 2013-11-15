@@ -2,8 +2,19 @@ autodetach on
 vbell off
 startup_message off
 
+term screen-256color
+
+# The following lines could be uncommented to support 256 colours on a system
+# that wasn't built with a 256 colour version of GNU Screen
+# Otherwise, simply set the terminal name to "xterm-256color" in PuTTY
+#attrcolor b ".I"
+#termcapinfo xterm-256color 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
+#defbce "on"
+
 screen -t bash 0 bash
-#screen -t vim  1 bash
+screen -t bash2 1 bash
+
+select 0
 
 backtick 1 5 5 $HOME/scripts/usermem.sh
 
