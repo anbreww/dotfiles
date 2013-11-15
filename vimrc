@@ -53,6 +53,13 @@
   endif
 " }
 
+" Status line {
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#branch#enabled = 1  " show git branch in statusline
+  let g:airline_powerline_fonts = 1
+  let g:airline_enable_branch = 1
+" }
+
 " Formatting {
   map Q gq
                                         " quick paragraph formatting
