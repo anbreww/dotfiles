@@ -31,6 +31,11 @@ all previous bundles:
 
 TODO : update install script to check for existing files, prompt to backup, and create symlinks if they don't already exist
 
+To add a submodule for a vim bundle :
+
+    cd ~/dotfiles
+    git submodule add https://github.com/user/repo.git vim/bundle/name
+
 ## Terminal
 
 A few things need to be adjusted for everything to look good.
