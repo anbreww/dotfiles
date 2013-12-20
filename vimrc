@@ -41,6 +41,7 @@
     set rnu                             " relative line numbering
   endif
   colorscheme molokai                   " set colour scheme
+  let g:rehash256=1
 " }
 
 " GUI options {
@@ -63,7 +64,7 @@
 " Formatting {
   map Q gq
                                         " quick paragraph formatting
-  set formatoptions=r                   " insert comment leader after enter
+ "set formatoptions=r                   " insert comment leader after enter
   set formatoptions+=t                  " auto-wrap text using textwidth
   set formatoptions+=c                  " recognize comments using textwidth
   set formatoptions+=q                  " allow formatting of comments with gq
@@ -81,9 +82,9 @@
 
 " Folding {
   set foldenable                        " enable folding
-  set foldcolumn=3                      " fold markers in left column
+  set foldcolumn=2                      " fold markers in left column
   set foldmethod=marker                 " fold by default
-  set foldlevelstart=10                 " only fold code after level 10
+  set foldlevelstart=3                  " only fold code after level 10
   set foldmarker={,}                    " C-style folds
 " }
 
@@ -329,6 +330,10 @@ function FT_python()
   autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\" 
   autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m 
 endfunction
+
+  " fold on indentation
+  set foldmethod=indent
+  set foldnestmax=2
 
 "" LILYPOND
 
