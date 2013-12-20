@@ -25,21 +25,21 @@ fi
 export EDITOR=vim
 
 # add MONO to path, mostly for Giver
-export MONO_PATH=/usr/local/lib/mono/notify-sharp
+#export MONO_PATH=/usr/local/lib/mono/notify-sharp
 
 # add Java 3D to path
-export CLASSPATH=/usr/lib/j3d/ext/j3dcore.jar:/usr/lib/j3d/ext/j3dutils.jar:/usr/lib/j3d/ext/vecmath.jar
-export LD_LIBRARY_PATH=/usr/lib/j3d/i386
+#export CLASSPATH=/usr/lib/j3d/ext/j3dcore.jar:/usr/lib/j3d/ext/j3dutils.jar:/usr/lib/j3d/ext/vecmath.jar
+#export LD_LIBRARY_PATH=/usr/lib/j3d/i386
 
 # add android dev tools to path
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/data/programming/android/current_tools
+#export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/data/programming/android/current_tools
 
 # java and stuff
-export PATH=$PATH:/opt/java/bin:/opt/eclipse
+#export PATH=$PATH:/opt/java/bin:/opt/eclipse
 # android on Arch
-export PATH=$PATH:/opt/android-sdk/tools
+#export PATH=$PATH:/opt/android-sdk/tools
 # add Microchip C30 tools to path
-export PATH=$PATH:/usr/local/pic/bin
+#export PATH=$PATH:/usr/local/pic/bin
 
 # add my user scripts to path
 export PATH=$PATH:~/scripts
@@ -68,39 +68,32 @@ alias netcfg='sudo netcfg'
 
 # program aliases
 alias blog='bzr log | less'
-alias p='ping -c 1 google.com' # quick internet connection test
-alias p6='ping6 -c 1 ipv6.google.com' # quick internet connection test
-alias worms='cd /home/andrew/.wine/drive_c/Games/wa-newedition;./WA.exe'
+alias glog='git log | less'
+
+# internet connection tests
+alias p='ping -c 1 google.com' 
+alias p6='ping6 -c 1 ipv6.google.com'
 
 # editor aliases
 alias e='vim'
+alias v='vim'
 alias vrc='vim ~/.vimrc'
 alias brc='vim ~/.bashrc'
 
 alias ip6='ip -6'
 
 # folder aliases
-alias ard='cd /home/andrew/documents/programming/arduino/arduino-0010/'
-alias xb="cd /data/programming/avr/quadmatrix/xbeematrix/pycode"
-alias pr="cd /data/programming"
-alias rb="cd /data/programming/robopoly"
-alias api="cd /data/programming/python/api"
+alias h='cd ~'
+alias pr='cd ~/projects'
 
-# folders for semester project
-alias gt="cd /data/semester-proj/code/gateway"
-alias nd="cd /data/semester-proj/code/initial_tests"
-alias lb="cd /data/semester-proj/code/project_libs"
-alias rp="cd /data/master-proj/ && vim thesis-andrew.tex"
-alias rd="cd /data/master-proj/"
+# python aliases
+alias py='python'
+alias ipy='ipython'
+alias venv='. venv/bin/activate'
+alias d='deactivate'
 
-# EPFL aliases
-alias epfl='vpn'
-alias vpn='sudo vpnc-connect'
-alias vpnd='sudo vpnc-disconnect'
 
 # ssh aliases
-alias epflssh='rm /home/andrew/.ssh/known_hosts ; ssh -X watson@cosunrays'
-#alias epfl='epflssh'
 alias loki='ssh andrew@loki'
 alias einherjer='ssh andrew@192.168.1.66'
 alias bifrost='ssh andrew@192.168.1.11'
@@ -110,6 +103,9 @@ alias temploki='ssh andrew@192.168.1.89'
 alias tl='temploki'
 alias asgard='ssh root@192.168.1.1'
 
+# load ssh keys into memory using keychain
+alias keych="eval `keychain --eval --nogui -Q -q id_rsa`"
+
 # resume screen session on webfaction (specify Unicode)
 alias wf='ssh -t tunebird@tunebird.webfactional.com screen -raAdU'
 
@@ -118,11 +114,6 @@ alias lk='ssh -t andrew@watsons.ch screen -rRaAdU'
 
 # screen on sigyn
 alias sigyn='ssh -t mansfeld@sigyn.watsons.ch screen -rRaAdU'
-
-# screen on robopoly server
-alias rbpapi='ssh -t root@rbpolysrv1.epfl.ch screen -raAdU api'
-alias rbplog='ssh -t root@rbpolysrv1.epfl.ch screen -raAdU log'
-alias rbpn='ssh root@rbpolysrv1.epfl.ch'
 
 alias wake_aquamarine='etherwake 00:00:00:00:00:00'
 
@@ -222,5 +213,4 @@ if [ -f .motd ]; then
 	cat .motd | cowsay
 fi
 
-eval `keychain --eval --nogui -Q -q id_rsa`
 export PYTHONDOCS=/usr/share/doc/python/html/
