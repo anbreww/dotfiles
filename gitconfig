@@ -6,11 +6,60 @@
 	status = auto
 	branch = auto
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	last = log -1 HEAD
+[alias]
+  # see here for examples and explanation : 
+  # http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+ 
+  # shortcut to list all aliases!
+  la = "!git config -l | grep alias | cut -c 7-"
+
+  # logging aliases
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+  ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  le = log --oneline --decorate
+  filelog = log -u
+  fl = log -u
+  # log with graph, two options
+  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  lg = !"git lg1"
+
+  # show modified files in last commit
+  dl = "!git ll -1"
+  last = log -1 HEAD
+  # show diff of last commit
+  dlc = diff --cached HEAD^
+
+  # show full diff of a commit given a revision
+  dr  = "!f() { git diff "$1"^.."$1"; }; f"
+  lc  = "!f() { git ll "$1"^.."$1"; }; f"
+  diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+  # find file path or text in the codebase
+  f = "!git ls-files | grep -i"
+  grep = grep -Ii
+  gr = grep -Ii
+
+  # last tag
+  lasttag = describe --tags --abbrev=0
+  lt = describe --tags --abbrev=0
+
+  # stash operations
+  sl = stash list
+  sa = stash apply
+  ss = stash save
+
+  # super basic shortcuts
+  cp = cherry-pick
+  st = status -s
+  cl = clone
+  ci = commit
+  co = checkout
+  br = branch 
+  diff = diff --word-diff
+  dc = diff --cached
 [core]
 	autocrlf = input	# commit unix-style line endings
 [push]
