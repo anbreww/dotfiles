@@ -38,7 +38,7 @@
   hi cursorline guibg=#333333           " make that line dark
   if version >= 703                     " new stuff for vim 7.0.3
     set colorcolumn=80                  " line length marker
-    set rnu                             " relative line numbering
+    "set rnu                             " relative line numbering
   endif
   colorscheme molokai                   " set colour scheme
   let g:rehash256=1
