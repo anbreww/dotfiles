@@ -1,0 +1,31 @@
+cask_args appdir: "/Applications"
+
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+
+cask "visual-studio-code"
+cask "firefox"
+cask "vlc"
+cask "spotify"
+
+brew "mas"
+brew "curl"
+brew "wget"
+brew "git"
+brew "vim"
+brew "coreutils"
+brew "htop"
+brew "tmux"
+brew "nmap"
+
+brew "p7zip"
+brew "golang"
+
+brew "hugo"
+
+# App Store
+# mas "Telegram", id: 747648890

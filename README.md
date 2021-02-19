@@ -4,20 +4,22 @@ Various personal scripts and helpers for my day-to-day linux adventures
 
 ## How to use
 
-Init repo in your home
+Init repo in your home and run the install script
 
     cd ~
     git clone git@github.com:tunebird/dotfiles.git
+    ./install
 
-Then symlink the required dotfiles from home
+Or alternatively, manually symlink the required dotfiles from home
 
     ln -s ~/dotfiles/vimrc .vimrc
     ln -s ~/dotfiles/vim .vim
 
-See `install.rb` which I haven't touched since I started the repo.
-I'll probably write a quick python script when I have the time...
 
 ## Vim submodules
+
+(note: this is now handled by dotbot. It will init and update all git
+submodules when invoked)
 
 Vim packages are installed using vim-fugitive. They get installed into
 `~/.vim/bundle/` and are autoloaded.
@@ -29,7 +31,6 @@ all previous bundles:
     git submodule init
     git submodule update
 
-TODO : update install script to check for existing files, prompt to backup, and create symlinks if they don't already exist
 
 To add a submodule for a vim bundle :
 
@@ -55,6 +56,16 @@ GNU Screen must have been compiled with 256 colour support.
 
 The `vim-powerline` add-on requires a patched font to display special symbols.
 Install one from the [powerline-fonts][1] repository and set PuTTY to use it.
+
+## Mac OS setup
+
+### Install homebrew
+
+run `brew_once.sh` to install homebrew and oh_my_zsh.
+
+### Other programs
+
+run brew bundle to install homebrew packages specified in the Brewfile
 
 
 [1]: https://github.com/Lokaltog/powerline-fonts

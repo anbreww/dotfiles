@@ -1,0 +1,20 @@
+- defaults:
+    link:
+        relink: true
+
+# remove dead symbolic links that point to dotfiles repo
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.zshrc: zshrc
+
+- create:
+    - ~/projects
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
