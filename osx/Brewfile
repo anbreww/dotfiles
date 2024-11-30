@@ -21,6 +21,7 @@ brew "coreutils"
 brew "htop"
 brew "tmux"
 brew "nmap"
+brew "tree"
 
 brew "p7zip"
 brew "golang"

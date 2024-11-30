@@ -515,7 +515,6 @@ latex-letters	latexhelp.txt	/*latex-letters*
 latex-macros	latex-suite.txt	/*latex-macros*
 latex-margin-notes	latexhelp.txt	/*latex-margin-notes*
 latex-master-file	latex-suite.txt	/*latex-master-file*
-latex-master-file-specification	latex-suite.txt	/*latex-master-file-specification*
 latex-math	latexhelp.txt	/*latex-math*
 latex-modes	latexhelp.txt	/*latex-modes*
 latex-package-scanning	latex-suite.txt	/*latex-package-scanning*
@@ -914,7 +913,6 @@ ls_a_ec	latex-suite.txt	/*ls_a_ec*
 ls_a_ed	latex-suite.txt	/*ls_a_ed*
 ls_a_ee	latex-suite.txt	/*ls_a_ee*
 ls_a_ef	latex-suite.txt	/*ls_a_ef*
-ls_a_eg	latex-suite.txt	/*ls_a_eg*
 ls_a_eh	latex-suite.txt	/*ls_a_eh*
 ls_a_ei	latex-suite.txt	/*ls_a_ei*
 ls_a_ej	latex-suite.txt	/*ls_a_ej*

@@ -214,3 +214,4 @@ if [ -f .motd ]; then
 fi
 
 export PYTHONDOCS=/usr/share/doc/python/html/
+. "$HOME/.cargo/env"

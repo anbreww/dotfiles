@@ -8,11 +8,16 @@ export ZSH="/Users/andrew/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
+
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOBIN
+
+# Define editor to use in aliases later on
+EDITOR=vim
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,13 +84,18 @@ plugins=(
   brew
   docker
   npm
-  osx
+  macos
   bgnotify
   web-search
 )
 
 source $ZSH/oh-my-zsh.sh
 
+
+# Pure terminal prompt
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+prompt pure
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -111,3 +121,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+
+#
+
+alias edit="open -a Sublime\ Text"
+alias e="edit"
+alias zrc="$EDITOR ~/.zshrc"
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# add Sublime Text CLI to path
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+
